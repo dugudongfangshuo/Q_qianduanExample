@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="Tools/bootstrap-select-1.13.18/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="Tools/bootstrap/bootstrap-4.6.1/bootstrap-4.6.1/dist/css/bootstrap.min.css">
+
+
+    <script src="Tools/jquery-3.6.0.min.js"></script>
+    <script src="Tools/popper.min.js"></script>
+    <script src="Tools/bootstrap/bootstrap-4.6.1/bootstrap-4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="Tools/bootstrap-select-1.13.18/js/bootstrap-select.min.js"></script>
+
+
+
+</head>
+<body>
+
+<form>
+    <label>正常的select</label>
+    <select class="selectM">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <br>
+    <label>bootstarp的select</label>
+    <select class="selectM" id="bootstrapSelect" onselect="onSelectItem()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+</form>
+<script>
+    $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+
+    $('#bootstrapSelect').selectpicker()
+
+    // select选择事件
+    $('#bootstrapSelect').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+         alert($('#bootstrapSelect').find('option:selected').val())
+         alert($('#bootstrapSelect').find('option:selected').text())
+    });
+
+
+</script>
+</body>
+</html>

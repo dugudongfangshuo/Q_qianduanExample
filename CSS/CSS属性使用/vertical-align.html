@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align-->
+
+<!--可以使得当前元素和父元素的文字和内容对齐-->
+<style>
+    img.top {
+        vertical-align: text-top;
+    }
+
+    img.bottom {
+        vertical-align: text-bottom;
+    }
+
+    img.middle {
+        vertical-align: middle;
+    }
+</style>
+
+<!--用来对行内元素进行垂直对齐的-->
+<div>An <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32"/>
+        image with a default alignment.
+</div>
+<div>An <img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32"
+             height="32"/> image with a text-top alignment.
+</div>
+<div>An <img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32"
+             height="32"/> image with a text-bottom alignment.
+</div>
+<div>An <img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32"
+             height="32"/> image with a middle alignment.
+</div>
+
+<!--行内元素没有高度只有大小，块级元素有高度独占一行-->
+<!--inline-block即使行内元素又可以有高度和image一样-->
+<div>
+    hhhhh
+    <div style="display: inline-block;height: 20px;border: 1px solid;vertical-align: 20%">hello</div>
+    <div style="display: inline-block;height: 110px;border: 1px solid;vertical-align: middle">hello</div>
+</div>
+
+</body>
+</html>

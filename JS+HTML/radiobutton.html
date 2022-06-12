@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Tools/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<form>
+    <label for="f1">1</label>
+    <input id="f1"  type="radio" checked value="1" name="numbers"></input>
+    <label for="f2">2</label>
+    <input id="f2"  type="radio" checked value="2" name="numbers"></input>
+    <label for="f3">3</label>
+    <input id="f3"  type="radio" checked value="3" name="numbers"></input>
+    <label for="f4">4</label>
+    <input id="f4" type="radio" checked value="4" name="numbers"></input>
+</form>
+
+<script>
+  $("input[name=numbers]").click(()=>{
+      alert($("input[name=numbers]:checked").val())
+  })
+
+
+</script>
+
+
+</body>
+</html>
